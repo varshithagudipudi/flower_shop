@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body, html {
+            height: 100%;
+            font-family: Arial, sans-serif;
+        }
+        .text-p2 {
+            font-size: 18px;
+            margin-bottom: 30px;
+            color: #333;
+        }
+        .text button {
+            padding: 15px 30px;
+            cursor: pointer;
+            border-radius: 5px;
+            background-color: red;
+            color: white;
+            border: none;
+            font-weight: bold;
+            text-align: center;
+        }
+        .text {
+            padding: 200px;
+        }
+        .text-mother {
+            font-size: 65px;
+            font-family: utopia;
+            margin-bottom: 20px;
+        }
+        .text-new {
+            font-size: 40px;
+            margin-bottom: 10px;
+            font-family: utopia;
+            color: red;
+        }
+        .nav-bar-container {
+            width: 100%;
+            height: 100px;
+            background-color: white;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+        .nav-bar {
+            display: flex;
+            position: relative;
+            justify-content: space-between;
+            align-items: center;
+            padding: 50px 150px;
+            height: 100%;
+        }
+        .nav-bar ul {
+            display: flex;
+            list-style: none;
+            gap: 20px;
+        }
+        .nav-bar li {
+            padding: 20px;
+            font-size: 15px;
+            
+        }
+        .nav-bar li:hover {
+            color: red;
+        }
+        .nav-bar p {
+            font-size: 50px;
+            font-family: utopia;
+        }
+        .text-background {
+            background-image: url(hero0.jpeg);
+            height: 100vh;
+            background-size: cover;
+            
+        }
+        @keyframes SlidIn {
+            from {
+                transform: translateX(-100px);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+        .text-new {
+            opacity: 0;
+            animation: SlidIn 1s ease 1s forwards;
+        }
+        .text-mother {
+            opacity: 0;
+            animation: SlidIn 1s ease 1.2s forwards;
+        }
+        .text-p2 {
+            opacity: 0;
+            animation: SlidIn 1s ease 1.4s forwards;
+        }
+        .text button {
+            opacity: 0;
+            animation: SlidIn 1s ease 1.6s forwards;
+        }
+        .cards-container {
+            display: flex;
+            justify-content:center;
+            gap: 30px;
+           margin-top: -120px;
+        }
+        .card1, .card2, .card3 {
+            padding: 45px 120px;
+            color: white;
+            position: relative;
+            overflow: hidden;
+            border-radius: 2px;
+
+        }
+        .card1::before, .card2::before, .card3::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background-size: cover;
+            filter: blur(2px);
+            z-index: 1;
+            transform: scale(1);
+            transition: transform 1.0s ease, filter 1.0s ease;
+        } 
+        .card p{
+            margin-bottom: 10px;
+        }
+        .card-p2 {
+            text-decoration: underline;
+            font-size: 13px;
+            font-weight: bold;
+        }
+        .card-p1 {
+            font-size: 20px;
+        }
+        .card1::before {
+            background-image: url(card1.jpeg);
+                    }
+        .card2::before {
+            background-image: url(card2.jpeg);
+            
+        }
+        .card3::before {
+            background-image: url(card4.webp);
+        }
+        .card1 p, .card2 p, .card3 p {
+            position: relative;
+            z-index: 2;
+        }
+        .card1:hover::before, .card2:hover::before, .card3:hover::before {
+            transform: scale(1.5);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="nav-bar-container">
+            <div class="nav-bar">
+                <p>Phuler</p>
+                <ul>
+                    <li>HOME</li>
+                    <li>SHOP</li>
+                    <li>PRODUCTS</li>
+                    <li>BLOG</li>
+                    <li>ABOUT</li>
+                    <li>CONTACT</li>
+                    <li>MY Cart</li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="text-background">
+            <div class="text">
+                <h1 class="text-new">New Arrivals</h1>
+                <p class="text-mother">For Mother's Day!</p>
+                <p class="text-p2">Exclusive Offer -10% Off This Week</p>
+                <button>SHOP NOW</button>
+            </div>
+        </div>
+        <div class="cards-container">
+            <div class="card1">
+                <p class="card-p1">CAMELLIAS</p>
+                <p class="card-p2">SHOP NOW</p>
+            </div>
+            <div class="card2">
+                <p class="card-p1">BERGAMOT</p>
+                <p class="card-p2">SHOP NOW</p>
+            </div>
+            <div class="card3">
+                <p class="card-p1">BOTTLEBRUSH</p>
+                <p class="card-p2">SHOP NOW</p>
+            </div>
+        </div>
+        <section class="bouquet-main-container">
+            <div class="bouquet-container">
+                <div class="bouquet"></div>
+                <div class="bouquet"></div>
+                <div class="bouquet"></div>
+                <div class="bouquet"></div>
+                <div class="bouquet"></div>
+                <div class="bouquet"></div>
+                <div class="bouquet"></div>
+                <div class="bouquet"></div>
+            </div>
+        </section>
+    </main>
+    <footer></footer>
+</body>
+</html>
