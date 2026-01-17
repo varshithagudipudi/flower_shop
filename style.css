@@ -1,0 +1,208 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body, html {
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+.top-nav {
+    z-index: 10001;
+    top: 0;
+}
+.text-p2 {
+    font-size: 18px;
+    margin-bottom: 30px;
+    color: #333;
+}
+.text button {
+    padding: 15px 30px;
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: red;
+    color: white;
+    border: none;
+    font-weight: bold;
+    text-align: center;
+}
+.text {
+    padding: 200px;
+}
+.text-mother {
+    font-size: 65px;
+    font-family: utopia;
+    margin-bottom: 20px;
+}
+.text-new {
+    font-size: 40px;
+    margin-bottom: 10px;
+    font-family: utopia;
+    color: red;
+}
+.nav-bar-container {
+    width: 100%;
+    height: 100px;
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+.nav-bar {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 150px;
+    height: 100%;
+}
+.nav-bar ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+.nav-bar li {
+    padding: 20px;
+    font-size: 15px;
+                
+}
+.nav-bar li:hover {
+    color: red;
+}
+.nav-bar p {
+    font-size: 50px;
+    font-family: utopia;
+}
+.text-background {
+    background-image: url(hero0.jpeg);
+    height: 100vh;
+    background-size: cover;
+                
+}
+@keyframes SlidIn {
+    from {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+.text-new {
+    opacity: 0;
+    animation: SlidIn 1s ease 1s forwards;
+}
+.text-mother {
+    opacity: 0;
+    animation: SlidIn 1s ease 1.2s forwards;
+}
+.text-p2 {
+    opacity: 0;
+    animation: SlidIn 1s ease 1.4s forwards; 
+}
+.text button {
+    opacity: 0;
+    animation: SlidIn 1s ease 1.6s forwards;
+}
+.cards-container {
+    display: flex;
+    justify-content:center;
+    gap: 30px;
+    margin-top: -70px;
+}
+.card1, .card2, .card3 {
+    padding: 50px 120px;
+    color: white;
+    position: relative;
+    overflow: hidden;
+    border-radius: 2px;
+
+}
+.card1::before, .card2::before, .card3::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    filter: blur(2px);
+    z-index: 1;
+    transform: scale(1);
+    transition: transform 1.0s ease, filter 1.0s ease;
+} 
+.card p{
+    margin-bottom: 10px;
+}
+.card-p2 {
+    text-decoration: underline;
+    font-size: 13px;
+    font-weight: bold;
+}
+.card-p1 {
+    font-size: 20px;
+}
+.card1::before {
+    background-image: url(card1.jpeg);
+}
+.card2::before {
+    background-image: url(card2.jpeg);
+                
+}
+.card3::before {
+    background-image: url(card4.webp);
+}
+.card1 p, .card2 p, .card3 p {
+    position: relative;
+    z-index: 2;
+}
+.card1:hover::before, .card2:hover::before, .card3:hover::before {
+    transform: scale(1.5);
+}
+.bouquet-container {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+.bouquet {
+    padding: 20px;
+}
+.bouquet img {
+    height: 40vh;
+    padding: 20px;
+}
+.bouquet-content {
+    display: flex;
+    justify-content: space-between;
+    
+}
+.bouquet-content hr {
+    width: 60%;
+    height: 2px;
+    background-color: #333;
+    border: none;
+    margin: 10px 0;
+}
+.bouquet-main-container {
+    margin: 70px 200px;
+}
+.bouquet-content ul {
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+}
+.btns button{
+    padding: 10px;
+    border: none;
+}
+.btns {
+    display: flex;
+    gap: 10px;
+}
+.btns button:hover {
+    background-color: red;
+    color: white;
+}
+.bouquet-content li:hover {
+    color: red;
+}
